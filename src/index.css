@@ -1,0 +1,786 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #1c1c1c;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* signup */
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  flex-wrap: wrap;
+}
+
+.signup-form {
+  width: 330px;
+  text-align: center;
+}
+
+.signup-form input {
+  width: 95%;
+  padding: 5px;
+  border: 1px solid rgb(119, 119, 119);
+  font-size: 17px;
+  color: rgb(83, 83, 83);
+  margin-top: 21px;
+}
+
+.signup-btn {
+  width: 135px;
+  height: 33px;
+  background-color: rgb(2, 173, 122);
+  color: white;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  margin-top: 22px;
+}
+
+.heading {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.heading p {
+  color: #fff;
+}
+
+.account {
+  text-align: left;
+  margin-top: -10px;
+}
+
+.account p {
+  font-size: 14px;
+  color: rgb(172, 172, 172);
+}
+
+/* login */
+
+.login-form {
+  width: 330px;
+  text-align: center;
+}
+
+.login-form input {
+  width: 95%;
+  padding: 5px;
+  border: 1px solid rgb(119, 119, 119);
+  font-size: 17px;
+  color: rgb(255, 255, 255);
+  margin-top: 21px;
+}
+
+.login-btn {
+  width: 135px;
+  height: 33px;
+  background-color: rgb(109, 129, 255);
+  color: white;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  margin-top: 22px;
+}
+
+/* navbar */
+
+nav {
+  padding: 20px 20px;
+  margin-bottom: 10px
+}
+
+.menu-holder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.l-s_holder {
+  display: flex;
+  gap: 15px;
+}
+
+.l-s_holder a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  font-family: "Raleway", sans-serif;
+}
+
+.l-s_holder a:hover {
+  color: #E50914;
+}
+
+/* searchbar */
+
+.group {
+  display: flex;
+  line-height: 28px;
+  align-items: center;
+  position: relative;
+  max-width: 190px;
+}
+
+.search-input {
+  font-family: "Raleway", sans-serif;
+  width: 100%;
+  height: 30px;
+  padding-left: 2.5rem;
+  box-shadow: 0 0 0 1.5px #2b2c37, 0 0 25px -17px #000;
+  border: 0;
+  border-radius: 5px;
+  background-color: #16171d;
+  outline: none;
+  color: #bdbecb;
+  transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+  cursor: text;
+  z-index: 0;
+}
+
+.search-input::placeholder {
+  color: #bdbecb;
+}
+
+.search-input:hover {
+  box-shadow: 0 0 0 2.5px #2f303d, 0px 0px 25px -15px #000;
+}
+
+.search-input:active {
+  transform: scale(0.95);
+}
+
+.search-input:focus {
+  box-shadow: 0 0 0 2.5px #2f303d;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  fill: #bdbecb;
+  width: 1rem;
+  height: 1rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* filter */
+
+.filters {
+  display: flex;
+  width: 35%;
+}
+
+.genre-selection {
+  color: #ffff;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  align-items: center;
+}
+
+.year-selection {
+  color: #ffff;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  align-items: center;
+}
+
+.year-selection::-webkit-scrollbar {
+  width: 5px;
+}
+
+.year-selection::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-left: 1px solid #d4d4d4;
+}
+
+.year-selection::-webkit-scrollbar-thumb {
+  background: #b5b5b5;
+  border-radius: 6px;
+  border: 2px solid #f1f1f1;
+}
+
+.year-selection::-webkit-scrollbar-thumb:hover {
+  background: #000000;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #b5b5b5 #f1f1f1;
+}
+
+/* home-page */
+
+.home-main {
+  width: 100%;
+  padding: 20px;
+}
+
+.logout-btn {
+  width: 100px;
+  height: 36px;
+  border: none;
+  border-radius: 10%;
+  background-color: rgb(0, 132, 255);
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* movie-card */
+
+.movies-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding: 20px;
+}
+
+.card {
+  width: 100%;
+  border-radius: 12px;
+
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05, 1.05);
+}
+
+.card_image {
+  width: 100%;
+  height: 235px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card-info {
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 16px 24px 24px 24px;
+
+}
+
+.details-container {
+  display: flex;
+  justify-content: space-between;
+  background: none;
+
+}
+
+.card_category {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #868686;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.stars {
+  display: inline-flex;
+  gap: 2px;
+  color: gold;
+  font-size: 16px;
+}
+
+.releaseTime {
+  font-family: "Raleway", sans-serif;
+  font-size: 13px;
+  color: #868686;
+  font-weight: 700;
+}
+
+.card_title {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3px;
+  background: none;
+}
+
+.play-btn {
+  padding: 5px 4px;
+  font-family: "Raleway", sans-serif;
+  background-color: #E50914;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #ffffff;
+  outline: none;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.play-btn:hover {
+  background-color: #ff1f2d;
+}
+
+.watchlist-btn {
+  font-family: "Raleway", sans-serif;
+  background-color: #1f80e0;
+  color: #ffffff;
+  padding: 5px 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+  font-weight: 500;
+  outline: none;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.watchlist-btn:hover {
+  background-color: #4da3ff;
+  color: #fff;
+}
+
+.play-btn,
+.watchlist-btn {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.play-btn:active,
+.watchlist-btn:active {
+  transform: scale(0.94);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* pagination */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 30px 0;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  background: #222;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pagination button.active {
+  background: #e50914;
+}
+
+.pagination button:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+/* movie-detail page */
+
+.movie-detail-main {
+  max-width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: white;
+  font-family: "Raleway", sans-serif;
+}
+
+.prime-logo span {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.movie-detail-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.content-section {
+  position: relative;
+  z-index: 10;
+  margin-left: 20px;
+}
+
+.content-section .movie-title {
+  font-size: 52px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  font-family: serif;
+  color: #e5e7eb;
+  font-family: "Raleway", sans-serif;
+}
+
+.category-badge {
+  display: inline-block;
+  color: #10b981;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.movie-description {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #e5e7eb;
+  max-width: 650px;
+  font-family: "Raleway", sans-serif;
+}
+
+.movie-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+  font-size: 14px;
+  color: #d1d5db;
+}
+
+.meta-badge {
+  background: #374151;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.imdb-rating {
+  background: #1f2937;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.genre-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+
+.genre-section span {
+  cursor: pointer;
+}
+
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.btn-primary {
+  background: white;
+  color: black;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-family: "Raleway", sans-serif;
+}
+
+.btn-primary:hover {
+  background: #e5e7eb;
+}
+
+.membership-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #d1d5db;
+  margin-bottom: 20px;
+  font-family: "Raleway", sans-serif;
+}
+
+.rental-info {
+  font-size: 13px;
+  color: #9ca3af;
+  margin-bottom: 30px;
+  font-family: "Raleway", sans-serif;
+}
+
+.poster-section {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.movie-poster {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+
+
+@media (max-width: 600px) {
+
+  .menu-holder {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  nav {
+    margin-bottom: 0;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    order: 1;
+  }
+
+  .l-s_holder {
+    order: 2;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+
+  .l-s_holder span {
+    display: none;
+  }
+
+  .logout-btn {
+    padding: 4px 8px;
+    font-size: 13px;
+    height: auto;
+    border-radius: 4px;
+  }
+  .filters{
+    display: none;
+  }
+
+  .group {
+    order: 3;
+    width: 100%;
+    margin-top: 13px;
+  }
+
+  .search-input {
+    height: 35px;
+    font-size: 16px;
+    padding-left: 3rem;
+    border-radius: 8px;
+    justify-content: center;
+  }
+
+  .search-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    left: 1rem;
+  }
+
+  .home-main {
+    width: 100%;
+    padding: 0;
+  }
+
+  .movies-grid {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+
+  .play-btn,
+  .watchlist-btn {
+    font-size: 11px;
+    padding: 4px 6px;
+    letter-spacing: 1px;
+  }
+
+  .movie-detail-main {
+    min-height: auto;
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+
+  .movie-detail-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .poster-section {
+    order: -1;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .movie-poster {
+    max-width: 260px;
+    width: 100%;
+  }
+
+  .content-section {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+  .menu-holder {
+    flex-wrap: nowrap;
+    gap: 12px;
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .group {
+    max-width: 260px;
+  }
+
+  .search-input {
+    height: 34px;
+    font-size: 15px;
+  }
+
+  .movies-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 16px;
+    gap: 20px;
+  }
+
+  .card_image {
+    height: 220px;
+  }
+
+  .play-btn,
+  .watchlist-btn {
+    font-size: 12px;
+    padding: 5px 8px;
+    letter-spacing: 1.5px;
+  }
+
+  .logout-btn {
+    width: 90px;
+    height: 34px;
+    font-size: 15px;
+  }
+
+  .movie-detail-wrapper {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 20px 0;
+  }
+
+  .poster-section {
+    order: -1;
+    justify-content: center;
+  }
+
+  .movie-poster {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 12px;
+    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.6);
+  }
+
+  .content-section {
+    margin: 0 auto;
+    max-width: 760px;
+    text-align: center;
+  }
+
+
+  .content-section .movie-title {
+    font-size: 38px;
+    letter-spacing: 1.2px;
+    margin-bottom: 12px;
+  }
+
+  .movie-description {
+    font-size: 16.5px;
+    line-height: 1.65;
+    max-width: 680px;
+    margin-inline: auto;
+  }
+
+
+  .movie-meta {
+    justify-content: center;
+    gap: 12px;
+    font-size: 13px;
+  }
+
+  .meta-badge,
+  .imdb-rating {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+
+  .genre-section {
+    justify-content: center;
+    gap: 12px;
+    font-size: 14px;
+  }
+
+  .action-buttons {
+    justify-content: center;
+  }
+
+  .btn-primary {
+    padding: 14px 34px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+}
