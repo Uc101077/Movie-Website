@@ -31,7 +31,7 @@ const MovieCard = ({ movie, isWatchlist }) => {
           <div className="details-container">
             <span className="card_category">
               {movie.rating}/10
-              <span className="stars">{renderStars(movie.rating)}</span>
+              <span className="rating-stars">{renderStars(movie.rating)}</span>
             </span>
             <span className="releaseTime">{movie.year}</span>
           </div>

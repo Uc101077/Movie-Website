@@ -599,7 +599,7 @@ nav {
   gap: 5px;
 }
 
-.stars {
+.rating-stars {
   display: inline-flex;
   gap: 2px;
   color: gold;
