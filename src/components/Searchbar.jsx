@@ -1,16 +1,52 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 import useDebounce from "../hooks/useDebounce";
+import movieData from "../data/movies";
+import { useLocation } from "react-router-dom";
 
 const Searchbar = () => {
-  const { setSearchQuery } = useContext(AuthContext);
   const [search, setSearch] = useState("");
+  const [suggestions, setSuggestions] = useState([]);
+
+  const { setSearchQuery, watchlist } = useContext(AuthContext);
 
   const debouncedSearch = useDebounce(search, 400);
+  const location = useLocation();
 
   useEffect(() => {
     setSearchQuery(debouncedSearch);
   }, [debouncedSearch, setSearchQuery]);
+
+  // 📍 Detect Watchlist Page
+  const isWatchlistPage = location.pathname === "/watchlist";
+
+  useEffect(() => {
+    setSearchQuery(debouncedSearch);
+  }, [debouncedSearch, setSearchQuery]);
+
+  useEffect(() => {
+    if (!search.trim()) {
+      setSuggestions([]);
+      return;
+    }
+
+    const sourceData = isWatchlistPage ? watchlist : movieData;
+
+    const matches = sourceData
+      .filter((movie) =>
+        movie.title.toLowerCase().includes(search.toLowerCase())
+      )
+      .slice(0, 5);
+
+    setSuggestions(matches);
+  }, [search, isWatchlistPage, watchlist]);
+
+  const handleSuggestionClick = (title) => {
+    setSearch(title);
+    setSuggestions([]);
+    setSearchQuery(title);
+  };
+
   return (
     <>
       <div className="group">
@@ -27,6 +63,18 @@ const Searchbar = () => {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
+        {suggestions.length > 0 && (
+          <ul className="suggestions">
+            {suggestions.map((movie) => (
+              <li
+                key={movie._id.$oid}
+                onClick={() => handleSuggestionClick(movie.title)}
+              >
+                {movie.title} ({movie.year})
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </>
   );
