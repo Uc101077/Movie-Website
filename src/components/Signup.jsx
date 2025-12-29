@@ -1,12 +1,14 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const Signup = () => {
   const [data, setData] = useState({
     name: "",
     email: "",
     password: "",
+    contact: "",
   });
 
   const navigate = useNavigate();
@@ -20,6 +22,10 @@ const Signup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (data.contact.length < 10) {
+      toast.error("Mobile number must be at least 10 digits");
+      return;
+    }
     signup(data, navigate);
   };
   return (
@@ -46,6 +52,13 @@ const Signup = () => {
               type="password"
               name="password"
               placeholder="Enter your Password"
+              onChange={handleInput}
+            />
+            <input
+              type="number"
+              name="contact"
+              placeholder="Enter your mobile no"
+              maxLength={10}
               onChange={handleInput}
             />
             <p>
