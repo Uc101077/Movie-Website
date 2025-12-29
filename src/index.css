@@ -1,11 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+  --bg-color: #1c1c1c;
+  --card-bg: #16171d;
+  --text-color: #ffffff;
+  --muted-text: #bdbecb;
+  --hover-bg: #333;
+  --border-color: #2f303d;
+}
+
+/* 🌞 Light Mode */
+[data-theme="light"] {
+  --bg-color: #f4f4f4;
+  --card-bg: #ffffff;
+  --text-color: #111111;
+  --muted-text: #555;
+  --hover-bg: #e5e5e5;
+  --border-color: #d0d0d0;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #1c1c1c;
+  color: var(--text-color);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+nav,
+.home-main,
+.movie-detail-main {
+  background-color: var(--bg-color);
 }
 
 .container {
@@ -103,6 +132,12 @@ nav {
   margin-bottom: 10px
 }
 
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
 .menu-holder {
   display: flex;
   justify-content: space-between;
@@ -112,6 +147,7 @@ nav {
 .nav-links {
   display: flex;
   gap: 15px;
+  color: var(--text-color);
 }
 
 .nav-links li {
@@ -119,13 +155,21 @@ nav {
   cursor: pointer;
 }
 
+.nav-links li .links {
+  font-weight: 500;
+  color: var(--text-color);
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+}
+
+
 .l-s_holder {
   display: flex;
   gap: 15px;
 }
 
 .l-s_holder a {
-  color: white;
+  color: var(--text-color);
   text-decoration: none;
   font-weight: 400;
   font-family: "Raleway", sans-serif;
@@ -150,19 +194,20 @@ nav {
   width: 100%;
   height: 30px;
   padding-left: 2.5rem;
-  box-shadow: 0 0 0 1.5px #2b2c37, 0 0 25px -17px #000;
   border: 0;
   border-radius: 5px;
-  background-color: #16171d;
+  background-color: var(--card-bg);
+  color: var(--muted-text);
+  box-shadow: 0 0 0 1.5px var(--border-color);
   outline: none;
-  color: #bdbecb;
+
   transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
   cursor: text;
   z-index: 0;
 }
 
 .search-input::placeholder {
-  color: #bdbecb;
+  color: var(--text-color);
 }
 
 .search-input:hover {
@@ -195,7 +240,7 @@ nav {
   position: absolute;
   top: 45px;
   width: 100%;
-  background: #1c1c1c;
+  background: var(--card-bg);
   border-radius: 6px;
   z-index: 10;
   list-style: none;
@@ -207,11 +252,11 @@ nav {
 .suggestions li {
   padding: 10px;
   cursor: pointer;
-  color: white;
+  color: var(--text-color);
 }
 
 .suggestions li:hover {
-  background: #333;
+  background: var(--hover-bg);
 }
 
 /* filter */
@@ -222,14 +267,16 @@ nav {
 }
 
 .genre-selection {
-  color: #ffff;
+  color: var(--text-color);
+  background-color: var(--bg-color);
   text-align: center;
   font-family: "Raleway", sans-serif;
   align-items: center;
 }
 
 .year-selection {
-  color: #ffff;
+  color: var(--text-color);
+  background-color: var(--bg-color);
   text-align: center;
   font-family: "Raleway", sans-serif;
   align-items: center;
@@ -266,6 +313,225 @@ nav {
   padding: 20px;
 }
 
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 22px;
+}
+
+.switch #input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Track */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #2196f3;
+  transition: 0.4s;
+  overflow: hidden;
+}
+
+.slider.round {
+  border-radius: 22px;
+}
+
+/* Thumb */
+.sun-moon {
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  bottom: 2px;
+  background-color: yellow;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+/* Checked state */
+#input:checked+.slider {
+  background-color: #000;
+}
+
+#input:checked+.slider .sun-moon {
+  transform: translateX(22px);
+  background-color: white;
+  animation: rotate-center 0.6s ease-in-out both;
+}
+
+/* Moon dots */
+.moon-dot {
+  opacity: 0;
+  transition: 0.4s;
+  fill: gray;
+}
+
+#input:checked+.slider .moon-dot {
+  opacity: 1;
+}
+
+/* Moon dots positioning */
+#moon-dot-1 {
+  left: 6px;
+  top: 2px;
+  width: 4px;
+  height: 4px;
+  position: absolute;
+}
+
+#moon-dot-2 {
+  left: 1px;
+  top: 7px;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+}
+
+#moon-dot-3 {
+  left: 11px;
+  top: 12px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+}
+
+/* Light rays */
+#light-ray-1,
+#light-ray-2,
+#light-ray-3 {
+  position: absolute;
+  fill: white;
+  opacity: 10%;
+  z-index: -1;
+}
+
+#light-ray-1 {
+  width: 28px;
+  height: 28px;
+  left: -5px;
+  top: -5px;
+}
+
+#light-ray-2 {
+  width: 36px;
+  height: 36px;
+  left: -9px;
+  top: -9px;
+}
+
+#light-ray-3 {
+  width: 42px;
+  height: 42px;
+  left: -12px;
+  top: -12px;
+}
+
+/* Clouds */
+.cloud-light,
+.cloud-dark {
+  position: absolute;
+  animation: cloud-move 6s infinite;
+}
+
+.cloud-light {
+  fill: #eee;
+}
+
+.cloud-dark {
+  fill: #ccc;
+  animation-delay: 1s;
+}
+
+#cloud-1 {
+  width: 26px;
+  left: 22px;
+  top: 10px;
+}
+
+#cloud-2 {
+  width: 14px;
+  left: 30px;
+  top: 7px;
+}
+
+#cloud-3 {
+  width: 20px;
+  left: 14px;
+  top: 16px;
+}
+
+#cloud-4 {
+  width: 26px;
+  left: 26px;
+  top: 12px;
+}
+
+#cloud-5 {
+  width: 14px;
+  left: 34px;
+  top: 9px;
+}
+
+#cloud-6 {
+  width: 20px;
+  left: 16px;
+  top: 18px;
+}
+
+/* Stars */
+.stars {
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+#input:checked+.slider .stars {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.star {
+  fill: white;
+  position: absolute;
+  animation: star-twinkle 2s infinite;
+}
+
+#star-1 {
+  width: 12px;
+  top: 1px;
+  left: 2px;
+}
+
+#star-2 {
+  width: 5px;
+  top: 11px;
+  left: 2px;
+}
+
+#star-3 {
+  width: 8px;
+  top: 14px;
+  left: 8px;
+}
+
+#star-4 {
+  width: 10px;
+  top: 0;
+  left: 12px;
+}
+
+.username-holder {
+  color: var(--text-color);
+  margin-right: "5px";
+  align-content: "center";
+  margin-top: 6px;
+  font-family: "Raleway", sans-serif;
+}
+
 .logout-btn {
   width: 100px;
   height: 36px;
@@ -291,7 +557,7 @@ nav {
 .card {
   width: 100%;
   border-radius: 12px;
-
+  background: var(--card-bg);
   box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease;
 }
@@ -327,7 +593,7 @@ nav {
   font-size: 13px;
   letter-spacing: 2px;
   font-weight: 700;
-  color: #868686;
+  color: var(--muted-text);
   display: flex;
   align-items: center;
   gap: 5px;
@@ -343,7 +609,7 @@ nav {
 .releaseTime {
   font-family: "Raleway", sans-serif;
   font-size: 13px;
-  color: #868686;
+  color: var(--muted-text);
   font-weight: 700;
 }
 
@@ -351,7 +617,7 @@ nav {
   margin-top: 5px;
   margin-bottom: 10px;
   font-family: "Raleway", sans-serif;
-  color: #fff;
+  color: var(--text-color);
   text-transform: capitalize;
 }
 
@@ -634,7 +900,8 @@ nav {
     height: auto;
     border-radius: 4px;
   }
-  .filters{
+
+  .filters {
     display: none;
   }
 
@@ -651,6 +918,11 @@ nav {
     border-radius: 8px;
     justify-content: center;
   }
+
+  .search-input::placeholder {
+    color: var(--muted-text);
+  }
+
 
   .search-icon {
     width: 1.2rem;
@@ -701,7 +973,7 @@ nav {
   }
 }
 
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (min-width: 670px) and (max-width: 1024px) {
 
   .menu-holder {
     flex-wrap: nowrap;
@@ -809,5 +1081,24 @@ nav {
     padding: 14px 34px;
     font-size: 16px;
     border-radius: 8px;
+  }
+
+  .filters {
+    width: auto;
+    min-width: 180px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .genre-selection,
+  .year-selection {
+    height: 22px;
+    font-size: 10px;
+    padding: 2px 0px;
+  }
+
+  .nav-controls {
+    gap: 10px;
   }
 }

@@ -1,4 +1,4 @@
-import { createContext, useState, useMemo } from "react";
+import { createContext, useState, useMemo, useEffect } from "react";
 import toast from "react-hot-toast";
 import movieData from "../data/movies";
 
@@ -9,6 +9,14 @@ export const AuthProvier = ({ children }) => {
     const storedUser = localStorage.getItem("currentUser");
     return storedUser ? JSON.parse(storedUser) : null;
   });
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem("theme") || "dark";
+  });
+
+  useEffect(() => {
+  document.documentElement.setAttribute("data-theme", theme);
+}, [theme]);
+
 
   const [searchQuery, setSearchQuery] = useState("");
   const [genre, setGenre] = useState("Genre");
@@ -109,6 +117,12 @@ export const AuthProvier = ({ children }) => {
     return ["Year", ...Array.from(new Set(allYears))].sort((a, b) => b - a);
   }, []);
 
+  const toggleTheme = () => {
+    const newTheme = theme === "dark" ? "light" : "dark";
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+  };
+
   return (
     <AuthContext.Provider
       value={{
@@ -127,6 +141,8 @@ export const AuthProvier = ({ children }) => {
         setReleaseYear,
         genres,
         years,
+        theme,
+        toggleTheme,
       }}
     >
       {children}

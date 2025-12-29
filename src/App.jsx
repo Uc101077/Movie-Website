@@ -9,6 +9,7 @@ import Watchlist from "./pages/Watchlist";
 import { Toaster } from "react-hot-toast";
 import MovieDetail from "./pages/MovieDetail";
 
+
 function App() {
   const { user } = useContext(AuthContext);
   return (
