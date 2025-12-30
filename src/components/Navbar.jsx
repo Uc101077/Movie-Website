@@ -35,7 +35,6 @@ const Navbar = () => {
             </li>
           </ul>
           <Searchbar />
-          {/* 🎯 FILTERS */}
           <div className="filters">
             <select
               className="genre-selection"
