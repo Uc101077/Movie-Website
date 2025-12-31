@@ -23,7 +23,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: var(--text-color);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   scrollbar-width: thin;
   scrollbar-color: #b5b5b5 #f1f1f1;
@@ -65,7 +64,6 @@ nav,
   padding: 5px;
   border: 1px solid rgb(119, 119, 119);
   font-size: 17px;
-  color: rgb(83, 83, 83);
   margin-top: 21px;
 }
 
@@ -87,7 +85,7 @@ nav,
 }
 
 .heading p {
-  color: #fff;
+  color: var(--text-color);
 }
 
 .account {
@@ -100,6 +98,12 @@ nav,
   color: rgb(172, 172, 172);
 }
 
+.login-form input,
+.signup-form input {
+  background-color: var(--card-bg);   
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
 /* login */
 
 .login-form {
@@ -112,7 +116,6 @@ nav,
   padding: 5px;
   border: 1px solid rgb(119, 119, 119);
   font-size: 17px;
-  color: rgb(255, 255, 255);
   margin-top: 21px;
 }
 
@@ -959,6 +962,32 @@ nav {
 
   .content-section {
     margin-left: 0;
+  } 
+
+  .update-password {
+    padding: 12px;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+
+  .update-password form {
+    padding: 22px 18px;
+    border-radius: 10px;
+  }
+
+  .update-password h2 {
+    font-size: 20px;
+    margin-bottom: 14px;
+  }
+
+  .update-password input {
+    font-size: 13px;
+    padding: 11px 12px;
+  }
+
+  .update-password button {
+    height: 38px;
+    font-size: 14px;
   }
 }
 
@@ -1090,4 +1119,147 @@ nav {
   .nav-controls {
     gap: 10px;
   }
+
+   .update-password form {
+    max-width: 420px;
+    padding: 26px 24px;
+  }
+
+  .update-password h2 {
+    font-size: 21px;
+  }
+
+  .update-password input {
+    font-size: 14px;
+  }
+
+  .update-password button {
+    height: 40px;
+    font-size: 15px;
+  }
+} 
+
+.profile-wrapper {
+  position: relative;
+}
+.profile-toggle{
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+.profile-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #4f46e5;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.profile-menu-container {
+  position: relative;
+}
+
+.profile-menu {
+  position: absolute;
+  right: 0;
+  top: 42px;
+  width: 300px;
+  background-color: var(--bg-color);
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  z-index: 999;
+}
+
+
+.profile-data {
+  font-weight: 600;
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.profile-link {
+  display: block;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+
+.logout-btn {
+  width: 100%;
+} 
+
+/* Update Password */
+
+.update-password {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.update-password form {
+  width: 100%;
+  max-width: 380px;
+  background-color: var(--bg-color);
+  padding: 28px 24px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.update-password h2 {
+  text-align: center;
+  margin-bottom: 18px;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.update-password input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--text-color);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  outline: none;
+}
+
+.update-password input::placeholder {
+  color: var(--muted-text);
+}
+
+.update-password input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.25);
+}
+
+/* Button */
+.update-password button {
+  width: 100%;
+  height: 42px;
+  border-radius: 8px;
+  background-color: #4f46e5;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.update-password button:hover {
+  background-color: #4338ca;
+}
+
+.update-password button:active {
+  transform: scale(0.97);
 }

@@ -8,7 +8,7 @@ import { AuthContext } from "./context/AuthContext";
 import Watchlist from "./pages/Watchlist";
 import { Toaster } from "react-hot-toast";
 import MovieDetail from "./pages/MovieDetail";
-
+import UpdatePassWord from "./components/UpdatePassWord";
 
 function App() {
   const { user } = useContext(AuthContext);
@@ -39,6 +39,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
+          <Route
+            path="/updatepassword"
+            element={
+              user ? <UpdatePassWord /> : <Navigate to="/login" replace />
+            }
+          />
           <Route path="/signup" element={<Signup />} />
           <Route
             path="/watchlist"

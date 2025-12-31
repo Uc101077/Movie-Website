@@ -107,6 +107,28 @@ export const AuthProvier = ({ children }) => {
     navigate("/login");
   };
 
+const updatePassword = (newPassword) => {
+  if (!user) return;
+
+  const updatedUser = {
+    ...user,
+    password: newPassword,
+  };
+
+  // Update users list
+  const users = JSON.parse(localStorage.getItem("user")) || [];
+  const updatedUsers = users.map((u) =>
+    u.email === updatedUser.email ? updatedUser : u
+  );
+
+  localStorage.setItem("user", JSON.stringify(updatedUsers));
+
+  // 🔴 Force logout
+  localStorage.removeItem("currentUser");
+  setUser(null);
+};
+
+
   const genres = useMemo(() => {
     const allGenres = movieData.flatMap((movie) => movie.genre || []);
     return ["Genre", ...Array.from(new Set(allGenres))];
@@ -133,6 +155,7 @@ export const AuthProvier = ({ children }) => {
         login,
         signup,
         logout,
+        updatePassword,
         searchQuery,
         setSearchQuery,
         genre,
