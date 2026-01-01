@@ -100,10 +100,11 @@ nav,
 
 .login-form input,
 .signup-form input {
-  background-color: var(--card-bg);   
+  background-color: var(--card-bg);
   color: var(--text-color);
   border: 1px solid var(--border-color);
 }
+
 /* login */
 
 .login-form {
@@ -704,6 +705,8 @@ nav {
 /* movie-detail page */
 
 .movie-detail-main {
+  position: relative;
+  overflow: hidden;
   max-width: 100%;
   min-height: 100vh;
   margin: 0 auto;
@@ -712,8 +715,8 @@ nav {
   justify-content: center;
   padding: 20px;
   color: white;
-  font-family: "Raleway", sans-serif;
 }
+
 
 .prime-logo span {
   font-size: 28px;
@@ -962,7 +965,7 @@ nav {
 
   .content-section {
     margin-left: 0;
-  } 
+  }
 
   .update-password {
     padding: 12px;
@@ -989,9 +992,18 @@ nav {
     height: 38px;
     font-size: 14px;
   }
+
+  .mute-button {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.75rem;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
 }
 
-@media (min-width: 670px) and (max-width: 1024px) {
+@media (min-width: 650px) and (max-width: 1024px) {
 
   .menu-holder {
     flex-wrap: nowrap;
@@ -1097,6 +1109,7 @@ nav {
 
   .btn-primary {
     padding: 14px 34px;
+    width: 80%;
     font-size: 16px;
     border-radius: 8px;
   }
@@ -1120,7 +1133,7 @@ nav {
     gap: 10px;
   }
 
-   .update-password form {
+  .update-password form {
     max-width: 420px;
     padding: 26px 24px;
   }
@@ -1137,12 +1150,13 @@ nav {
     height: 40px;
     font-size: 15px;
   }
-} 
+}
 
 .profile-wrapper {
   position: relative;
 }
-.profile-toggle{
+
+.profile-toggle {
   color: var(--text-color);
   background-color: var(--bg-color);
 }
@@ -1170,7 +1184,7 @@ nav {
   background-color: var(--bg-color);
   border-radius: 8px;
   padding: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   z-index: 999;
 }
 
@@ -1191,7 +1205,7 @@ nav {
 
 .logout-btn {
   width: 100%;
-} 
+}
 
 /* Update Password */
 
@@ -1262,4 +1276,237 @@ nav {
 
 .update-password button:active {
   transform: scale(0.97);
+}
+
+
+/* movie-detail page with trailer */
+
+.movie-detail-main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+  color: white;
+}
+
+.trailer-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.trailer-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.trailer-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right,
+      rgba(0, 0, 0, 0.85) 0%,
+      rgba(0, 0, 0, 0.6) 50%,
+      rgba(0, 0, 0, 0.4) 100%);
+  z-index: 1;
+}
+
+.movie-detail-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1300px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.movie-detail-wrapper.faded {
+  opacity: 0.3;
+  transition: opacity 0.6s ease;
+}
+
+.movie-detail-wrapper.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+}
+
+.content-section {
+  position: relative;
+  z-index: 3;
+}
+
+.poster-section {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mute-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 1rem;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  width: 60px;
+  height: 60px;
+}
+
+.mute-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+/* Mobile specific fixes */
+@media (max-width: 600px) {
+  .movie-detail-main {
+    position: relative;
+    min-height: 100vh;
+    height: auto;
+    padding: 60px 20px 20px;
+    align-items: flex-start;
+  }
+
+  .trailer-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .trailer-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: none;
+  }
+
+  .trailer-overlay {
+    background: linear-gradient(to bottom,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0.85) 100%);
+  }
+
+  .movie-detail-wrapper {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0;
+  }
+
+  .content-section {
+    margin-left: 0;
+    order: 2;
+  }
+
+  .content-section .movie-title {
+    font-size: 28px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+  }
+
+  .movie-description {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .movie-meta {
+    font-size: 12px;
+    gap: 8px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+  }
+
+  .meta-badge,
+  .imdb-rating {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+
+  .genre-section {
+    font-size: 13px;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+
+  .poster-section {
+    order: 1;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .movie-poster {
+    max-width: 200px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  }
+
+  .membership-note {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+
+  .rental-info {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  .mute-button {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    padding: 0;
+  }
 }

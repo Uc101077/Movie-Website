@@ -1,15 +1,31 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import movieData from "../data/movies";
 import { AuthContext } from "../context/AuthContext";
 
 const MovieDetail = () => {
+  const [isMuted, setIsMuted] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [showDetails, setShowDetails] = useState(true);
+
+  const videoRef = useRef(null);
+  const hideTimeoutRef = useRef(null);
+
   const { id } = useParams();
 
   const { watchlist, addToWatchlist, removeFromWatchlist } =
     useContext(AuthContext);
 
   const movie = movieData.find((m) => m._id.$oid === id);
+    
+  useEffect(() => {
+    const video = videoRef.current;
+    return () => {
+      if (video) {
+        video.pause();
+      }
+    };
+  }, []);
 
   if (!movie)
     return (
@@ -22,12 +38,57 @@ const MovieDetail = () => {
     return `${hours}h ${mins}m`;
   };
 
+  const toggleMute = () => {
+    setIsMuted(!isMuted);
+  };
+
   const isInWatchlist =
     watchlist.filter((m) => m._id?.$oid === movie._id?.$oid).length > 0;
 
+
+
+  const triggerDetailsVisibility = () => {
+    setShowDetails(true);
+
+    if (hideTimeoutRef.current) {
+      clearTimeout(hideTimeoutRef.current);
+    }
+
+    hideTimeoutRef.current = setTimeout(() => {
+      setShowDetails(false);
+    }, 5000);
+  };
+
   return (
-    <div className="movie-detail-main">
-      <div className="movie-detail-wrapper">
+    <div
+      className="movie-detail-main"
+      onMouseMove={() => {
+        if (isPlaying) {
+          triggerDetailsVisibility();
+        }
+      }}
+    >
+      {movie?.trailer && (
+        <div className="trailer-background">
+          <video
+            ref={videoRef}
+            className="trailer-video"
+            src={movie.trailer}
+            loop
+            muted={isMuted}
+            playsInline
+            preload="metadata"
+          />
+          <div className="trailer-overlay" />
+        </div>
+      )}
+
+      <div
+        className={`movie-detail-wrapper
+    ${isPlaying && showDetails ? "faded" : ""}
+    ${isPlaying && !showDetails ? "hidden" : ""}
+  `}
+      >
         <div className="content-section">
           <h1 className="movie-title">{movie.title}</h1>
           <p className="movie-description">{movie.description}</p>
@@ -55,7 +116,25 @@ const MovieDetail = () => {
           </div>
 
           <div className="action-buttons">
-            <button className="btn-primary">Watch with Prime</button>
+            <button
+              className="btn-primary"
+              onClick={() => {
+                if (!videoRef.current) return;
+
+                if (isPlaying) {
+                  videoRef.current.pause();
+                  setIsPlaying(false);
+                  setShowDetails(true); // show permanently when paused
+                  clearTimeout(hideTimeoutRef.current);
+                } else {
+                  videoRef.current.play().catch(() => {});
+                  setIsPlaying(true);
+                  triggerDetailsVisibility(); // start 5s timer
+                }
+              }}
+            >
+              {isPlaying ? "Pause" : "Watch Trailer"}
+            </button>
             {isInWatchlist ? (
               <button
                 className="btn-primary"
@@ -84,10 +163,25 @@ const MovieDetail = () => {
           </p>
         </div>
 
-        <div className="poster-section">
-          <img src={movie.poster} alt={movie.title} className="movie-poster" />
-        </div>
+        {!isPlaying && (
+          <div className="poster-section">
+            <img
+              src={movie.poster}
+              alt={movie.title}
+              className="movie-poster"
+            />
+          </div>
+        )}
       </div>
+      {movie?.trailer && (
+        <button
+          onClick={toggleMute}
+          className="mute-button"
+          aria-label={isMuted ? "Unmute" : "Mute"}
+        >
+          {isMuted ? "🔇" : "🔊"}
+        </button>
+      )}
     </div>
   );
 };

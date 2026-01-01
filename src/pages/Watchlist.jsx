@@ -48,7 +48,7 @@ const Watchlist = () => {
       <Navbar />
       <div className="movies-grid">
         {filteredWatchlist.map((movie) => (
-          <div key={movie.id}>
+          <div key={movie._id.$oid}>
             <MovieCard movie={movie} isWatchlist={true} />
           </div>
         ))}
