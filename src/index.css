@@ -307,26 +307,6 @@ nav {
   background: #000000;
 }
 
-/* home-page */
-
-.home-main {
-  width: 100%;
-  padding: 20px;
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 44px;
-  height: 22px;
-}
-
-.switch #input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
 /* Theme Toggle */
 .slider {
   position: absolute;
@@ -536,6 +516,36 @@ nav {
   font-size: 17px;
   font-weight: 600;
   cursor: pointer;
+}
+
+/* home-page */
+
+.home-main {
+  width: 100%;
+  padding: 20px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 22px;
+}
+
+.switch #input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* watchlist page */
+.no-watchlist-items,
+.search_not_watchlist {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* movie-card */
@@ -1154,7 +1164,43 @@ nav {
 
 .profile-wrapper {
   position: relative;
+  display: inline-flex;
+  align-items: center;
 }
+
+.profile-tooltip {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(60, 60, 60, 0.95);
+  color: white;
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 100;
+}
+
+.profile-tooltip::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent rgba(60, 60, 60, 0.95) transparent;
+}
+
+.profile-wrapper:hover .profile-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(2px);
+}
+
 
 .profile-toggle {
   color: var(--text-color);
@@ -1277,7 +1323,6 @@ nav {
 .update-password button:active {
   transform: scale(0.97);
 }
-
 
 /* movie-detail page with trailer */
 

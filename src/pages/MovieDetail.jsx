@@ -2,6 +2,7 @@ import React, { useContext, useRef, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import movieData from "../data/movies";
 import { AuthContext } from "../context/AuthContext";
+import { VolumeX, Volume2  } from 'lucide-react';
 
 const MovieDetail = () => {
   const [isMuted, setIsMuted] = useState(true);
@@ -17,7 +18,7 @@ const MovieDetail = () => {
     useContext(AuthContext);
 
   const movie = movieData.find((m) => m._id.$oid === id);
-    
+
   useEffect(() => {
     const video = videoRef.current;
     return () => {
@@ -44,8 +45,6 @@ const MovieDetail = () => {
 
   const isInWatchlist =
     watchlist.filter((m) => m._id?.$oid === movie._id?.$oid).length > 0;
-
-
 
   const triggerDetailsVisibility = () => {
     setShowDetails(true);
@@ -179,7 +178,7 @@ const MovieDetail = () => {
           className="mute-button"
           aria-label={isMuted ? "Unmute" : "Mute"}
         >
-          {isMuted ? "🔇" : "🔊"}
+          {isMuted ? <VolumeX /> : <Volume2 />}
         </button>
       )}
     </div>

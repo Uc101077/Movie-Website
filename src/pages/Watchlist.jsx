@@ -30,19 +30,25 @@ const Watchlist = () => {
 
   if (watchlist.length === 0) {
     return (
-      <h2
-        style={{
-          color: "white",
-          display: "flex",
-          justifyContent: "center",
-          flexWrap: "wrap",
-          fontFamily: 'Raleway", sans-serif',
-        }}
+      <h2 className="no-watchlist-items"
       >
         Your watchlist is empty
       </h2>
     );
   }
+
+  if (filteredWatchlist.length === 0) {
+    return (
+      <>
+        <Navbar />
+        <h2 className="search_not_watchlist"
+        >
+          Movie not available in watchlist
+        </h2>
+      </>
+    );
+  }
+
   return (
     <>
       <Navbar />

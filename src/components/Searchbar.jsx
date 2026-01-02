@@ -17,7 +17,7 @@ const Searchbar = () => {
     setSearchQuery(debouncedSearch);
   }, [debouncedSearch, setSearchQuery]);
 
-  // 📍 Detect Watchlist Page
+
   const isWatchlistPage = location.pathname === "/watchlist";
 
   useEffect(() => {

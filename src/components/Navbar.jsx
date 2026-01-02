@@ -17,6 +17,7 @@ const Navbar = () => {
     years,
     theme,
     toggleTheme,
+    watchlist
   } = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -32,7 +33,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link className="links" to="/watchlist">
-                Watchlist
+                Watchlist ({user ? watchlist.length : null})
               </Link>
             </li>
           </ul>
@@ -185,6 +186,7 @@ const Navbar = () => {
                   >
                     {user.name.charAt(0).toUpperCase()}
                   </button>
+                  <div className="profile-tooltip">Profile</div>
                   <ProfileMenu
                     open={profileOpen}
                     setOpen={setProfileOpen}

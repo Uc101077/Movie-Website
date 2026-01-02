@@ -6,6 +6,7 @@ const movieData = [
     genre: ["Action", "Crime", "Drama"],
     rating: 9.0,
     poster: "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+     trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767261850/social-cat-youtube_YouTube_1080p_Way9Dexny3w_u5cj1a.mp4',
     description:
       "Batman faces the Joker, a criminal mastermind who seeks to plunge Gotham City into chaos.",
     language: "English",
@@ -18,6 +19,7 @@ const movieData = [
     genre: ["Action", "Sci-Fi", "Thriller"],
     rating: 8.8,
     poster: "https://image.tmdb.org/t/p/w500/edv5CZvWj09upOsy2Y6IwDhK8bt.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767260628/AVATAR_-_FIRE_AND_ASH_2025_-_Dream_As_One_Online_Spot_4K_Ultra_HD_ou55oc.mp4',
     description:
       "A thief who enters dreams to steal secrets must perform inception to redeem himself.",
     language: "English",
@@ -30,6 +32,7 @@ const movieData = [
     genre: ["Adventure", "Drama", "Sci-Fi"],
     rating: 8.6,
     poster: "https://image.tmdb.org/t/p/w500/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767260628/AVATAR_-_FIRE_AND_ASH_2025_-_Dream_As_One_Online_Spot_4K_Ultra_HD_ou55oc.mp4',
     description:
       "A team of explorers travels through a wormhole in space in an attempt to save humanity.",
     language: "English",
@@ -68,6 +71,7 @@ const movieData = [
     genre: ["Crime", "Drama", "Thriller"],
     rating: 8.5,
     poster: "https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767260628/AVATAR_-_FIRE_AND_ASH_2025_-_Dream_As_One_Online_Spot_4K_Ultra_HD_ou55oc.mp4',
     description:
       "A mentally troubled comedian embarks on a downward spiral that leads to chaos in Gotham City.",
     language: "English",
@@ -80,6 +84,7 @@ const movieData = [
     genre: ["Drama"],
     rating: 9.3,
     poster: "https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg",
+     trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767261850/social-cat-youtube_YouTube_1080p_Way9Dexny3w_u5cj1a.mp4',
     description:
       "Two imprisoned men bond over years, finding solace and redemption through acts of decency.",
     language: "English",
@@ -92,6 +97,7 @@ const movieData = [
     genre: ["Drama"],
     rating: 8.8,
     poster: "https://image.tmdb.org/t/p/w500/bptfVGEQuv6vDTIMVCHjJ9Dz8PX.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767260628/AVATAR_-_FIRE_AND_ASH_2025_-_Dream_As_One_Online_Spot_4K_Ultra_HD_ou55oc.mp4',
     description:
       "An insomniac office worker and a soap maker form an underground fight club.",
     language: "English",
@@ -104,6 +110,7 @@ const movieData = [
     genre: ["Crime", "Drama"],
     rating: 8.9,
     poster: "https://image.tmdb.org/t/p/original/vQWk5YBFWF4bZaofAbv0tShwBvQ.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767260628/AVATAR_-_FIRE_AND_ASH_2025_-_Dream_As_One_Online_Spot_4K_Ultra_HD_ou55oc.mp4',
     description:
       "The lives of two mob hitmen intertwine in tales of violence and redemption.",
     language: "English",
@@ -116,6 +123,7 @@ const movieData = [
     genre: ["Drama", "Romance"],
     rating: 8.8,
     poster: "https://image.tmdb.org/t/p/w500/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg",
+     trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767261850/social-cat-youtube_YouTube_1080p_Way9Dexny3w_u5cj1a.mp4',
     description:
       "A simple man unwittingly influences key historical events while pursuing his love.",
     language: "English",
@@ -128,6 +136,7 @@ const movieData = [
     genre: ["Action", "Sci-Fi"],
     rating: 8.7,
     poster: "https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767260628/AVATAR_-_FIRE_AND_ASH_2025_-_Dream_As_One_Online_Spot_4K_Ultra_HD_ou55oc.mp4',
     description:
       "A hacker discovers reality is a simulation and joins a rebellion to free humanity.",
     language: "English",
@@ -140,6 +149,7 @@ const movieData = [
     genre: ["Crime", "Drama"],
     rating: 9.2,
     poster: "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767260628/AVATAR_-_FIRE_AND_ASH_2025_-_Dream_As_One_Online_Spot_4K_Ultra_HD_ou55oc.mp4',
     description:
       "An organized crime dynasty's aging patriarch transfers control to his reluctant son.",
     language: "English",
@@ -152,6 +162,7 @@ const movieData = [
     genre: ["Crime", "Drama"],
     rating: 9.0,
     poster: "https://image.tmdb.org/t/p/w500/amvmeQWheahG3StKwIE1f7jRnkZ.jpg",
+     trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767261850/social-cat-youtube_YouTube_1080p_Way9Dexny3w_u5cj1a.mp4',
     description:
       "The early life and career of Vito Corleone as his son expands the family business.",
     language: "English",
@@ -164,6 +175,7 @@ const movieData = [
     genre: ["Adventure", "Fantasy"],
     rating: 8.8,
     poster: "https://image.tmdb.org/t/p/w500/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767260628/AVATAR_-_FIRE_AND_ASH_2025_-_Dream_As_One_Online_Spot_4K_Ultra_HD_ou55oc.mp4',
     description:
       "A hobbit begins his journey to destroy the One Ring and save Middle-earth.",
     language: "English",
@@ -176,6 +188,7 @@ const movieData = [
     genre: ["Adventure", "Fantasy"],
     rating: 8.7,
     poster: "https://image.tmdb.org/t/p/w500/5VTN0pR8gcqV3EPUHHfMGnJYN9L.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767260628/AVATAR_-_FIRE_AND_ASH_2025_-_Dream_As_One_Online_Spot_4K_Ultra_HD_ou55oc.mp4',
     description:
       "The Fellowship is broken, but their quest to destroy the One Ring continues.",
     language: "English",
@@ -188,6 +201,7 @@ const movieData = [
     genre: ["Adventure", "Fantasy"],
     rating: 8.9,
     poster: "https://image.tmdb.org/t/p/w500/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg",
+     trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767261850/social-cat-youtube_YouTube_1080p_Way9Dexny3w_u5cj1a.mp4',
     description:
       "Gandalf and Aragorn lead the world of men against Sauron's army to support Frodo.",
     language: "English",
@@ -200,6 +214,7 @@ const movieData = [
     genre: ["Animation", "Adventure", "Drama"],
     rating: 8.5,
     poster: "https://image.tmdb.org/t/p/w500/sKCr78MXSLixwmZ8DyJLrpMsd15.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767260628/AVATAR_-_FIRE_AND_ASH_2025_-_Dream_As_One_Online_Spot_4K_Ultra_HD_ou55oc.mp4',
     description:
       "Lion prince Simba must embrace his role after the death of his father.",
     language: "English",
@@ -212,6 +227,7 @@ const movieData = [
     genre: ["Action", "Drama"],
     rating: 8.5,
     poster: "https://image.tmdb.org/t/p/w500/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767260628/AVATAR_-_FIRE_AND_ASH_2025_-_Dream_As_One_Online_Spot_4K_Ultra_HD_ou55oc.mp4',
     description:
       "A betrayed Roman general seeks revenge against the corrupt emperor who murdered his family.",
     language: "English",
@@ -224,6 +240,7 @@ const movieData = [
     genre: ["Drama", "Romance"],
     rating: 7.9,
     poster: "https://image.tmdb.org/t/p/w500/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
+     trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767261850/social-cat-youtube_YouTube_1080p_Way9Dexny3w_u5cj1a.mp4',
     description:
       "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the Titanic.",
     language: "English",
@@ -249,6 +266,7 @@ const movieData = [
     genre: ["Action", "Adventure", "Sci-Fi"],
     rating: 8.4,
     poster: "https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767246014/Avengers_-_Endgame_-_4K_Trailer_1_eoptql.mp4',
     description:
       "The Avengers and their allies must stop Thanos before he wipes out half of the universe.",
     language: "English",
@@ -261,6 +279,7 @@ const movieData = [
     genre: ["Action", "Adventure", "Sci-Fi"],
     rating: 8.3,
     poster: "https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767246014/Avengers_-_Endgame_-_4K_Trailer_1_eoptql.mp4',
     description:
       "Peter Parker seeks Doctor Strange's help, but the spell goes wrong, opening the multiverse.",
     language: "English",
@@ -273,6 +292,7 @@ const movieData = [
     genre: ["Action", "Adventure", "Sci-Fi"],
     rating: 7.3,
     poster: "https://image.tmdb.org/t/p/w500/uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767246014/Avengers_-_Endgame_-_4K_Trailer_1_eoptql.mp4',
     description:
       "T'Challa returns home to Wakanda to take his rightful place as king and Black Panther.",
     language: "English",
@@ -285,6 +305,7 @@ const movieData = [
     genre: ["Action", "Fantasy", "Sci-Fi"],
     rating: 7.5,
     poster: "https://image.tmdb.org/t/p/original/xf8PbyQcR5ucXErmZNzdKR0s8ya.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767246014/Avengers_-_Endgame_-_4K_Trailer_1_eoptql.mp4',
     description:
       "A surgeon learns the mystic arts after a career-ending accident.",
     language: "English",
@@ -297,6 +318,7 @@ const movieData = [
     genre: ["Action", "Adventure", "Sci-Fi"],
     rating: 7.8,
     poster: "https://image.tmdb.org/t/p/w500/tVFRpFw3xTedgPGqxW0AOI8Qhh0.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767246014/Avengers_-_Endgame_-_4K_Trailer_1_eoptql.mp4',
     description:
       "Steve Rogers teams up with Black Widow to expose a conspiracy within S.H.I.E.L.D.",
     language: "English",
@@ -309,6 +331,7 @@ const movieData = [
     genre: ["Action", "Adventure", "Sci-Fi"],
     rating: 7.9,
     poster: "https://image.tmdb.org/t/p/w500/78lPtwv72eTNqFW9COBYI0dWDJa.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767246014/Avengers_-_Endgame_-_4K_Trailer_1_eoptql.mp4',
     description:
       "After being held captive, Tony Stark builds a suit of armor to fight evil.",
     language: "English",
@@ -321,6 +344,7 @@ const movieData = [
     genre: ["Action", "Adventure", "Comedy"],
     rating: 8.0,
     poster: "https://image.tmdb.org/t/p/w500/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767246014/Avengers_-_Endgame_-_4K_Trailer_1_eoptql.mp4',
     description:
       "A group of intergalactic criminals must pull together to stop a fanatical villain.",
     language: "English",
@@ -333,6 +357,7 @@ const movieData = [
     genre: ["Action", "Comedy"],
     rating: 8.0,
     poster: "https://image.tmdb.org/t/p/original/3E53WEZJqP6aM84D8CckXx4pIHw.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767246014/Avengers_-_Endgame_-_4K_Trailer_1_eoptql.mp4',
     description:
       "A former special forces operative becomes a mercenary with a twisted sense of humor.",
     language: "English",
@@ -345,6 +370,7 @@ const movieData = [
     genre: ["Action", "Drama", "Sci-Fi"],
     rating: 8.1,
     poster: "https://image.tmdb.org/t/p/w500/fnbjcRDYn6YviCcePDnGdyAkYsB.jpg",
+     trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767261850/social-cat-youtube_YouTube_1080p_Way9Dexny3w_u5cj1a.mp4',
     description:
       "An aging Wolverine must protect a young mutant pursued by dark forces.",
     language: "English",
@@ -357,6 +383,7 @@ const movieData = [
     genre: ["Adventure", "Drama", "Sci-Fi"],
     rating: 8.0,
     poster: "https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767260628/AVATAR_-_FIRE_AND_ASH_2025_-_Dream_As_One_Online_Spot_4K_Ultra_HD_ou55oc.mp4',
     description:
       "A young noble must travel to the most dangerous planet in the universe to ensure his family's future.",
     language: "English",
@@ -369,6 +396,7 @@ const movieData = [
     genre: ["Biography", "Drama", "History"],
     rating: 8.6,
     poster: "https://image.tmdb.org/t/p/original/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767260628/AVATAR_-_FIRE_AND_ASH_2025_-_Dream_As_One_Online_Spot_4K_Ultra_HD_ou55oc.mp4',
     description:
       "The story of J. Robert Oppenheimer and his role in the creation of the atomic bomb.",
     language: "English",
@@ -381,6 +409,7 @@ const movieData = [
     genre: ["Comedy", "Fantasy"],
     rating: 7.2,
     poster: "https://image.tmdb.org/t/p/original/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767260628/AVATAR_-_FIRE_AND_ASH_2025_-_Dream_As_One_Online_Spot_4K_Ultra_HD_ou55oc.mp4',
     description:
       "Barbie and Ken leave Barbie Land to discover the real world and their true purpose.",
     language: "English",
@@ -393,6 +422,7 @@ const movieData = [
     genre: ["Animation", "Adventure", "Comedy"],
     rating: 7.4,
     poster: "https://image.tmdb.org/t/p/w500/mINJaa34MtknCYl5AjtNJzWj8cD.jpg",
+     trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767261850/social-cat-youtube_YouTube_1080p_Way9Dexny3w_u5cj1a.mp4',
     description:
       "Anna and Kristoff search for Elsa, whose icy powers trapped the kingdom in eternal winter.",
     language: "English",
@@ -405,6 +435,7 @@ const movieData = [
     genre: ["Animation", "Adventure", "Family"],
     rating: 8.4,
     poster: "https://image.tmdb.org/t/p/w500/gGEsBPAijhVUFoiNpgZXqRVWJt2.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767260628/AVATAR_-_FIRE_AND_ASH_2025_-_Dream_As_One_Online_Spot_4K_Ultra_HD_ou55oc.mp4',
     description:
       "A young musician embarks on a journey to the Land of the Dead to find his great-great-grandfather.",
     language: "English",
@@ -417,6 +448,7 @@ const movieData = [
     genre: ["Animation", "Comedy", "Drama"],
     rating: 8.1,
     poster: "https://image.tmdb.org/t/p/w500/lRHE0vzf3oYJrhbsHXjIkF4Tl5A.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767246014/Avengers_-_Endgame_-_4K_Trailer_1_eoptql.mp4',
     description:
       "After young Riley is uprooted, her emotions struggle to guide her through a new life.",
     language: "English",
@@ -429,6 +461,7 @@ const movieData = [
     genre: ["Animation", "Adventure", "Comedy"],
     rating: 8.3,
     poster: "https://image.tmdb.org/t/p/w500/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg",
+     trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767261850/social-cat-youtube_YouTube_1080p_Way9Dexny3w_u5cj1a.mp4',
     description:
       "A cowboy doll feels threatened when a new spaceman toy joins the collection.",
     language: "English",
@@ -441,6 +474,7 @@ const movieData = [
     genre: ["Animation", "Action", "Adventure"],
     rating: 8.0,
     poster: "https://image.tmdb.org/t/p/w500/2LqaLgk4Z226KkgPJuiOQ58wvrm.jpg",
+     trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767261850/social-cat-youtube_YouTube_1080p_Way9Dexny3w_u5cj1a.mp4',
     description:
       "A family of undercover superheroes tries to live a quiet suburban life but are forced into action.",
     language: "English",
@@ -453,6 +487,7 @@ const movieData = [
     genre: ["Animation", "Adventure", "Comedy"],
     rating: 8.2,
     poster: "https://image.tmdb.org/t/p/w500/eHuGQ10FUzK1mdOY69wF5pGgEf5.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767246014/Avengers_-_Endgame_-_4K_Trailer_1_eoptql.mp4',
     description:
       "After his son is captured, a timid clownfish sets out on a journey to bring him home.",
     language: "English",
@@ -465,6 +500,7 @@ const movieData = [
     genre: ["Animation", "Comedy", "Family"],
     rating: 8.1,
     poster: "https://image.tmdb.org/t/p/w500/t3vaWRPSf6WjDSamIkKDs1iQWna.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767246014/Avengers_-_Endgame_-_4K_Trailer_1_eoptql.mp4',
     description:
       "A rat dreams of becoming a chef and forms an unlikely alliance with a young kitchen worker.",
     language: "English",
@@ -477,6 +513,7 @@ const movieData = [
     genre: ["Animation", "Adventure", "Comedy"],
     rating: 8.3,
     poster: "https://image.tmdb.org/t/p/w500/49WJfeN0moxb9IPfGn8AIqMGskD.jpg",
+     trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767261850/social-cat-youtube_YouTube_1080p_Way9Dexny3w_u5cj1a.mp4',
     description:
       "An old man ties thousands of balloons to his house and flies to South America with a stowaway boy.",
     language: "English",
@@ -489,6 +526,7 @@ const movieData = [
     genre: ["Biography", "Drama"],
     rating: 8.0,
     poster: "https://image.tmdb.org/t/p/original/lBYOKAMcxIvuk9s9hMuecB9dPBV.jpg",
+     trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767261850/social-cat-youtube_YouTube_1080p_Way9Dexny3w_u5cj1a.mp4',
     description:
       "A struggling salesman takes custody of his son as he's poised to begin a life-changing career.",
     language: "English",
@@ -501,6 +539,7 @@ const movieData = [
     genre: ["Biography", "Drama"],
     rating: 7.7,
     poster: "https://image.tmdb.org/t/p/w500/n0ybibhJtQ5icDqTp8eRytcIHJx.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767260628/AVATAR_-_FIRE_AND_ASH_2025_-_Dream_As_One_Online_Spot_4K_Ultra_HD_ou55oc.mp4',
     description:
       "The story of how Mark Zuckerberg created Facebook and faced legal challenges.",
     language: "English",
@@ -513,6 +552,7 @@ const movieData = [
     genre: ["Biography", "Comedy", "Crime"],
     rating: 8.2,
     poster: "https://image.tmdb.org/t/p/w500/pWHf4khOloNVfCxscsXFj3jj6gP.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767246014/Avengers_-_Endgame_-_4K_Trailer_1_eoptql.mp4',
     description:
       "Based on the true story of Jordan Belfort, who rose to power on Wall Street.",
     language: "English",
@@ -525,6 +565,7 @@ const movieData = [
     genre: ["Adventure", "Drama", "War"],
     rating: 8.3,
     poster: "https://image.tmdb.org/t/p/w500/7sfbEnaARXDDhKm0CZ7D7uc2sbo.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767260628/AVATAR_-_FIRE_AND_ASH_2025_-_Dream_As_One_Online_Spot_4K_Ultra_HD_ou55oc.mp4',
     description:
       "In Nazi-occupied France, a group of Jewish soldiers plan to assassinate Nazi leaders.",
     language: "English",
@@ -537,6 +578,7 @@ const movieData = [
     genre: ["Mystery", "Thriller"],
     rating: 8.1,
     poster: "https://image.tmdb.org/t/p/w500/kve20tXwUZpu4GUX8l6X7Z4jmL6.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767260628/AVATAR_-_FIRE_AND_ASH_2025_-_Dream_As_One_Online_Spot_4K_Ultra_HD_ou55oc.mp4',
     description:
       "A U.S. Marshal investigates a psychiatric facility on a remote island.",
     language: "English",
@@ -549,6 +591,7 @@ const movieData = [
     genre: ["Drama", "Mystery", "Sci-Fi"],
     rating: 8.5,
     poster: "https://image.tmdb.org/t/p/original/bdN3gXuIZYaJP7ftKK2sU0nPtEA.jpg",
+     trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767261850/social-cat-youtube_YouTube_1080p_Way9Dexny3w_u5cj1a.mp4',
     description: "Two rival magicians compete to create the ultimate illusion.",
     language: "English",
     duration: 130,
@@ -560,6 +603,7 @@ const movieData = [
     genre: ["Crime", "Drama", "Thriller"],
     rating: 8.6,
     poster: "https://image.tmdb.org/t/p/w500/6yoghtyTpznpBik8EngEmJskVUO.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767260628/AVATAR_-_FIRE_AND_ASH_2025_-_Dream_As_One_Online_Spot_4K_Ultra_HD_ou55oc.mp4',
     description:
       "Two detectives hunt a serial killer who uses the seven deadly sins as motives.",
     language: "English",
@@ -572,6 +616,7 @@ const movieData = [
     genre: ["Drama", "Music"],
     rating: 8.5,
     poster: "https://image.tmdb.org/t/p/original/7fn624j5lj3xTme2SgiLCeuedmO.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767246014/Avengers_-_Endgame_-_4K_Trailer_1_eoptql.mp4',
     description:
       "A young drummer enrolls at a music conservatory where his dreams are mentored by an abusive instructor.",
     language: "English",
@@ -584,6 +629,7 @@ const movieData = [
     genre: ["Comedy", "Drama", "Music"],
     rating: 8.0,
     poster: "https://image.tmdb.org/t/p/w500/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg",
+     trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767261850/social-cat-youtube_YouTube_1080p_Way9Dexny3w_u5cj1a.mp4',
     description:
       "While navigating their careers in Los Angeles, a pianist and an actress fall in love.",
     language: "English",
@@ -596,6 +642,7 @@ const movieData = [
     genre: ["Action", "Adventure", "Drama"],
     rating: 8.0,
     poster: "https://image.tmdb.org/t/p/original/ji3ecJphATlVgWNY0B0RVXZizdf.jpg",
+    trailer: 'https://res.cloudinary.com/de3grtfkd/video/upload/v1767260628/AVATAR_-_FIRE_AND_ASH_2025_-_Dream_As_One_Online_Spot_4K_Ultra_HD_ou55oc.mp4',
     description:
       "A frontiersman on a fur trading expedition fights for survival after being mauled by a bear.",
     language: "English",
