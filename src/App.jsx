@@ -8,7 +8,7 @@ import { AuthContext } from "./context/AuthContext";
 import Watchlist from "./pages/Watchlist";
 import { Toaster } from "react-hot-toast";
 import MovieDetail from "./pages/MovieDetail";
-import UpdatePassWord from "./components/UpdatePassWord";
+import UpdatePassWord from "./pages/UpdatePassWord";
 
 function App() {
   const { user } = useContext(AuthContext);
